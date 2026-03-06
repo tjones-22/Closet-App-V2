@@ -7,7 +7,7 @@ export class AppController {
   constructor(private readonly appService: AppService) {}
 
   @Get()
-  async getHello() {
+  async getPeople() {
     const dayArray: People[] = await this.appService.getDayChorePeople();
     const dishArray: People[] = await this.appService.getDishChorePeople();
 
