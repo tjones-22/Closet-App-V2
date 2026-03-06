@@ -6,7 +6,7 @@ Tyson Jones
 Tristan Jones
 
 ## TODO
-- Make Application Design
+
 
 ## Tyson
 

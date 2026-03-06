@@ -42,11 +42,11 @@ export class AppService {
     this.dayChorePeople.shiftPeople();
   }
 
-  getDishChorePeople(): People[] {
+  async getDishChorePeople(): Promise<People[]> {
     return this.dishChorePeople.getPeopleArray();
   }
 
-  getDayChorePeople(): People[] {
+  async getDayChorePeople(): Promise<People[]> {
     return this.dayChorePeople.getPeopleArray();
   }
 
