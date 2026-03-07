@@ -10,7 +10,7 @@ export class AppController {
   async getPeople() {
     const dayArray: People[] = await this.appService.getDayChorePeople();
     const dishArray: People[] = await this.appService.getDishChorePeople();
-
+     console.log("Get Request recognized")
     return {
       day_chores: dayArray,
       dish_chores: dishArray,

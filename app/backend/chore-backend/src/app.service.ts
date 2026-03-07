@@ -59,4 +59,5 @@ export class AppService {
   handleWeeklyDayRotation(): void {
     this.rotateDayChores();
   }
+ 
 }
