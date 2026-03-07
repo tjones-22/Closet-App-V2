@@ -3,11 +3,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { ScheduleModule } from '@nestjs/schedule';
 
-type ResponseObject<PeopleArray> = {
-  day_chores: PeopleArray;
-  dish_chores: PeopleArray;
 
-}
 
 
 describe('AppController', () => {
