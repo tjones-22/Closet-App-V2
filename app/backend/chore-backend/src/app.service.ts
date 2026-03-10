@@ -15,22 +15,22 @@ export class AppService {
 
   private buildDishPeople(): People[] {
     return [
-      new People('Tyson'),
-      new People('Brynlee'),
-      new People('Jerilynn/Keslee'),
-      new People('Tristan'),
-      new People('Dad'),
-      new People('Brockton/Mom'),
+      new People('Tyson',1),
+      new People('Brynlee',2),
+      new People('Jerilynn/Keslee',3),
+      new People('Tristan',4),
+      new People('Dad',5),
+      new People('Brockton/Mom',6),
     ];
   }
 
   private buildDayPeople(): People[] {
     return [
-      new People('Tyson'),
-      new People('Brynlee'),
-      new People('Jerilynn/Keslee'),
-      new People('Tristan'),
-      new People('Brockton'),
+      new People('Tyson',1),
+      new People('Brynlee',2),
+      new People('Jerilynn/Keslee',3),
+      new People('Tristan',4),
+      new People('Brockton',5),
     ];
   }
 

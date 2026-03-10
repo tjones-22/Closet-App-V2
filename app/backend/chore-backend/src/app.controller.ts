@@ -6,14 +6,17 @@ import { People } from './class/People';
 export class AppController {
   constructor(private readonly appService: AppService) {}
 
-  @Get()
-  async getPeople() {
-    const dayArray: People[] = await this.appService.getDayChorePeople();
+  @Get('/dish')
+  async getDishChoreList() {
     const dishArray: People[] = await this.appService.getDishChorePeople();
-     console.log("Get Request recognized")
-    return {
-      day_chores: dayArray,
-      dish_chores: dishArray,
-    };
+    console.log('Get Request recognized');
+    return dishArray;
+  }
+
+  @Get('/day')
+  async getDayChoreList() {
+    const dayChores: People[] = await this.appService.getDayChorePeople();
+    console.log('Get Request recognized');
+    return dayChores;
   }
 }
