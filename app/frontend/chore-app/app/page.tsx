@@ -16,7 +16,7 @@ export default function Home() {
 
   const getPeopleList = async () => {
     try {
-      const response = await fetch('http://localhost:8080/api/dish', {
+      const response = await fetch('http://localhost:8080/api/day', {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
@@ -39,8 +39,8 @@ export default function Home() {
     setError(false);
     getPeopleList().then((data) => {
       if (!data) return;
-      //setDayPeople(data);
-      setDishPeople(data);
+      setDayPeople(data);
+     // setDishPeople(data);
     });
   }, []);
 

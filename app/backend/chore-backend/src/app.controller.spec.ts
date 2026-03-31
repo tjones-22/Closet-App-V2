@@ -22,7 +22,7 @@ describe('AppController', () => {
   describe('root', () => {
     
     it('Will return an object with 2 keys with the chore arrays.', async () => {
-      let result = await appController.getPeople();
+      let result = await appController.get
       expect(result).toHaveProperty('day_chores' );
       expect(result).toHaveProperty('dish_chores');
       expect(Array.isArray(result.day_chores)).toBe(true);
