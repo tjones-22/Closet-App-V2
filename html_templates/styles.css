@@ -24,7 +24,8 @@ div{
 
 body{
     background-color: rgb(10, 65, 62);
-    
+    margin: 0;
+    padding: 0;
 }
 
 
