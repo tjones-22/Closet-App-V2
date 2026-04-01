@@ -1,34 +1,56 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { ScheduleModule } from '@nestjs/schedule';
-
-
-
+import { People } from './class/People';
 
 describe('AppController', () => {
   let appController: AppController;
 
+  const dishPeople = [
+    new People('Tyson', 1),
+    new People('Brynlee', 2),
+    new People('Jerilynn/Keslee', 3),
+  ];
+
+  const dayPeople = [
+    new People('Tristan', 4),
+    new People('Brockton', 5),
+  ];
+
+  const appServiceMock = {
+    getDishChorePeople: jest.fn(),
+    getDayChorePeople: jest.fn(),
+  };
+
   beforeEach(async () => {
+    jest.clearAllMocks();
+    appServiceMock.getDishChorePeople.mockResolvedValue(dishPeople);
+    appServiceMock.getDayChorePeople.mockResolvedValue(dayPeople);
+
     const app: TestingModule = await Test.createTestingModule({
-      imports: [ScheduleModule.forRoot()],
       controllers: [AppController],
-      providers: [AppService],
+      providers: [
+        {
+          provide: AppService,
+          useValue: appServiceMock,
+        },
+      ],
     }).compile();
 
     appController = app.get<AppController>(AppController);
   });
 
-  describe('root', () => {
-    
-    it('Will return an object with 2 keys with the chore arrays.', async () => {
-      let result = await appController.get
-      expect(result).toHaveProperty('day_chores' );
-      expect(result).toHaveProperty('dish_chores');
-      expect(Array.isArray(result.day_chores)).toBe(true);
-      expect(Array.isArray(result.dish_chores)).toBe(true);
+  describe('getDishChoreList', () => {
+    it('returns the dish chore people from AppService', async () => {
+      await expect(appController.getDishChoreList()).resolves.toBe(dishPeople);
+      expect(appServiceMock.getDishChorePeople).toHaveBeenCalledTimes(1);
     });
   });
 
-  
+  describe('getDayChoreList', () => {
+    it('returns the day chore people from AppService', async () => {
+      await expect(appController.getDayChoreList()).resolves.toBe(dayPeople);
+      expect(appServiceMock.getDayChorePeople).toHaveBeenCalledTimes(1);
+    });
+  });
 });
