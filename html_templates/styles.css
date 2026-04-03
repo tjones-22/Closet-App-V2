@@ -42,3 +42,7 @@ body{
     right: -275px;
     margin: -590px;
 }
+button  a {
+    text-decoration: none;
+    color: white;
+}
