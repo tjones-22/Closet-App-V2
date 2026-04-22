@@ -1,2 +1,21 @@
 @import "tailwindcss";
 
+body{
+  background-color: rgb(10, 65, 62);
+}
+
+.image {
+    position: fixed;
+    bottom: 0;
+    right: -1000;
+    margin: -20px;
+
+
+ 
+  }
+.designElement {
+    position: fixed;
+    bottom: 0;
+    right: -150px;
+    margin: -20px;
+}
