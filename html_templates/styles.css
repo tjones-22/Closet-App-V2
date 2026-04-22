@@ -1,4 +1,5 @@
-.main-content{
+
+div{
     border: 10px solid rgb(247, 247, 247);
     margin: 10px;
     padding: 10px;
@@ -24,92 +25,7 @@
 
 body{
     background-color: rgb(10, 65, 62);
-    margin: 0;
-    padding: 0;
-}
-.image {
-    position: fixed;
-    bottom: 0;
-    right: -1000;
-    margin: -20px;
-
-
- 
-  }
-.designelement {
-    position: fixed;
-    bottom: 0;
-    right: -275px;
-    margin: -590px;
-}
-button  a {
-    text-decoration: none;
-    color: white;
-}
-body{
-    margin:0;
-    padding:0;
+    
 }
 
-.middle {
-    position: absolute;
-    top: 70%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
-.btn{
-    background:rgb(28, 145, 139);;
-    border: 10px solid #ffffff;
-    font-family: "monteserrat", sans-serif;
-    text-transform: uppercase;
-    padding: 20px 40px;
-    min-width: 300px;
-    margin: 20px;
-    cursor: pointer;
-    transition: color 0.4s linear;
-    position: relative;
-    font-size: 30px;
-    color: rgb(116, 244, 227);
-    font-weight: bold;
-    border-radius: 15px;
-    text-decoration: none;
-}
-.btn:hover{
-    color: #fff;
-    background: none;
-}
-.btn::before{
-    content:"";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #000;
-    z-index: -1;
-    transform-origin: 0 0;
-    transition: transform 0.4s cubic-bezier(0.5,1.6,0.4,0.7);
-}
-.btn1::before{
-transform: scaleY(0);
-}
-.btn2::before{
-transform: scaleY(0);
-}
-.btn1:hover::before{
-transform: scaleY(1);
-}
-.btn1:active::before{
-transform: scaleY(1);
-}
-.btn2:hover::before{
-transform: scaleY(1);
-}
-.btn2:active::before{
-transform: scaleY(1);
-}
