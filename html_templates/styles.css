@@ -25,7 +25,44 @@ div{
 
 body{
     background-color: rgb(10, 65, 62);
-    
+    margin: 0;
+    padding: 0;
 }
 
-
+.middle{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.btn{
+    background-color: rgb(96, 224, 207);
+    border: 2px solid rgb(247, 247, 247);
+    text-transform: uppercase;
+    padding: 12px 20px;
+    color: rgb(247, 247, 247);
+    min-width: 200px;
+    font-family: "montserrat", sans-serif;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 24px;
+    margin: 10px;
+    cursor: pointer;
+    transition: color 0.4s linear;
+}
+.btn:hover{
+    color: #fff;
+}
+.btn::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(247, 247, 247);
+z-index: -1;
+   
+}
