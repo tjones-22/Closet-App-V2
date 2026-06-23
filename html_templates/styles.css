@@ -1,4 +1,3 @@
-
 div{
     border: 10px solid rgb(247, 247, 247);
     margin: 10px;
@@ -29,18 +28,33 @@ body{
     padding: 0;
 }
 
+
 .middle{
     position: absolute;
-    top: 50%;
+    top: 58%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
+
+.button-box{
+    border: 2px solid rgb(247, 247, 247);
+    border-radius: 12px;
+    /* Reduced padding so buttons don't appear cramped/touch */
+    padding: 6px 16px;
+    background-color: rgb(28, 145, 139);
+}
+
 .btn{
     background-color: rgb(96, 224, 207);
-    border: 2px solid rgb(247, 247, 247);
+    border: 3px solid rgb(247, 247, 247);
+    border-radius: 14px;
+
     text-transform: uppercase;
-    padding: 12px 20px;
+    padding: 10px 20px;
     color: rgb(247, 247, 247);
     min-width: 200px;
     font-family: "montserrat", sans-serif;
@@ -48,21 +62,19 @@ body{
     text-decoration: none;
     display: inline-block;
     font-size: 24px;
-    margin: 10px;
+    /* Reduced margin to avoid visual contact between the stacked buttons */
+    margin: 6px;
     cursor: pointer;
-    transition: color 0.4s linear;
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
 }
+
 .btn:hover{
+    background-color: rgb(43, 165, 150); /* darker hover */
     color: #fff;
+    transform: translateY(-1px);
 }
-.btn::before{
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgb(247, 247, 247);
-z-index: -1;
-   
+
+.btn:active{
+    transform: translateY(0);
 }
+
