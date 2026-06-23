@@ -28,10 +28,26 @@ body{
     padding: 0;
 }
 
+.design-element{
+    position: fixed;
+    bottom: 0;
+    margin: -20px;
+    pointer-events: none;
+}
+
+.design-element-left{
+    left: -100px;
+}
+
+.design-element-right{
+    right: -100px;
+}
+
+
 
 .middle{
     position: absolute;
-    top: 58%;
+    top: 65%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
@@ -39,6 +55,7 @@ body{
     flex-direction: column;
     gap: 20px;
 }
+
 
 .button-box{
     border: 2px solid rgb(247, 247, 247);
