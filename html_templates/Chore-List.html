@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chore List</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .chore-table-wrap {
+            margin-top: 40px;
+            display: flex;
+            justify-content: center;
+        }
+
+        table.chore-table {
+            border-collapse: collapse;
+            min-width: 900px;
+        }
+
+        .chore-table th,
+        .chore-table td {
+            border: 2px solid rgb(247, 247, 247);
+            padding: 10px 14px;
+            color: rgb(247, 247, 247);
+            background-color: rgba(28, 145, 139, 0.25);
+            text-align: center;
+            font-size: 18px;
+        }
+
+        .chore-table th:first-child {
+            background-color: rgba(96, 224, 207, 0.22);
+            text-align: left;
+            padding-left: 18px;
+        }
+
+        .section-heading {
+            text-align: center;
+            font-size: 42px;
+            color: rgb(96, 224, 207);
+            margin-top: 30px;
+        }
+
+        .subheading-row {
+            display: flex;
+            justify-content: center;
+            gap: 80px;
+            margin-top: 16px;
+            margin-bottom: 10px;
+            color: rgb(247, 247, 247);
+            font-size: 26px;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="section-heading">Jones Family Chore List</h1>
+
+    <div class="subheading-row">
+        <div><strong>Chores</strong></div>
+        <div><strong>People</strong></div>
+    </div>
+
+    <div class="chore-table-wrap">
+        <table class="chore-table" aria-label="Chores by person">
+            <thead>
+                <tr>
+                    <th scope="col">Chores</th>
+                    <th scope="col">Tyson</th>
+                    <th scope="col">Tristan</th>
+                    <th scope="col">Jerrillyn</th>
+                    <th scope="col">Brockton</th>
+                    <th scope="col">Brynlee</th>
+                    <th scope="col">Brecka</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">vacumming upstairs</th>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <th scope="row">vacumming downstairs</th>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+
+                <tr>
+                    <th scope="row">kitchen</th>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <th scope="row">bathrooms</th>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <th scope="row">laundry</th>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <th scope="row">bonus room</th>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
+
